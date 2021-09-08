@@ -13,6 +13,7 @@ struct ContentView: View {
     var greenCircle = Circle()
     @State var buttonText = "Start"
 
+
     
     var body: some View {
         VStack{
@@ -63,19 +64,19 @@ struct ContentView: View {
 
 
     func switchColors() {
-//        if yellowCircle.opacity(0.3) || redCircle.opacity(1.0) {
-//            buttonText = "NEXT"
-//            yellowCircle.opacity(1.0)
-//            redCircle.opacity(0.3)}
-//        if greenCircle.opacity(0.3) as! Bool || yellowCircle.opacity(1.0) as! Bool {
-//            buttonText = "NEXT"
-//            greenCircle.opacity(1.0)
-//            yellowCircle.opacity(0.3)}
-//        else {
-//            buttonText = "NEXT"
-//            redCircle.opacity(1.0)
-//            greenCircle.opacity(0.3)
-//        }
+        if yellowCircle.opacity(0.3) || redCircle.opacity(1.0) {
+            buttonText = "NEXT"
+            yellowCircle.opacity(1.0)
+            redCircle.opacity(0.3)}
+        if greenCircle.opacity(0.3) || yellowCircle.opacity(1.0) {
+            buttonText = "NEXT"
+            greenCircle.opacity(1.0)
+            yellowCircle.opacity(0.3)}
+        else {
+            buttonText = "NEXT"
+            redCircle.opacity(1.0)
+            greenCircle.opacity(0.3)
+        }
     }
 }
 
